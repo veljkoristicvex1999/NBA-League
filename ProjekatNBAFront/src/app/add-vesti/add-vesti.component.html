@@ -1,0 +1,28 @@
+<body><br><br><br><br><br>
+<div class="container">
+    <div class="center">
+        <h3>Adding news
+        </h3>
+        <div>
+        </div>
+        <form (ngSubmit)="dodajVesti()">
+            <div>
+                <br>
+                Description
+                <input class="form-control" type="text" name="opis" required [(ngModel)]="opis"/>
+            </div><br><br>
+            <div>
+                Picture
+                <input class="form-control" type="text" name="slikaVest" required [(ngModel)]="slikaVest"/>
+            </div>
+            <div><br>
+                <button type="submit" class="btn btn-primary">Add news</button>
+            </div>
+        </form>
+        <br><br><br><br><br><br>
+        <br><br><br><br>
+
+    </div>
+
+</div>
+</body>

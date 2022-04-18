@@ -1,0 +1,66 @@
+
+<html>
+<body>
+    <br><br><br>
+    <h2>NBA teams</h2><br>
+
+    <table class="center" >
+        <tr>
+        <td>
+            Team name:
+        </td>
+        <td>
+            Logo:
+        </td>
+        <td>
+            Coach name:
+        </td>
+    </tr>
+<tr *ngFor="let team of teams$ | async">
+    <td>{{team.imeTIma}}</td>
+    <td><img height="100" width="100"  src="{{team.logoTima}}" />   </td>
+     <td>{{team.imeTrenera}}</td>
+</tr>
+</table>
+<br><br>
+<div >
+    <div class="centar">
+    <form (ngSubmit)="players()" *ngIf="adminLog || korisnikLog">
+       <p><i>  Select the team whose roster you want to see:</i>
+        <input  type="text" name="imeTIma"  [(ngModel)]="imeTIma"/>    
+    </p>
+
+           <pre>   <input type="submit" value="Potvrdi"></pre> 
+    </form>
+</div>
+</div>
+<div *ngIf="players$">
+    <table class="center"  >
+        <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            Number
+        </td>
+        <td>
+            Total points
+
+        </td>
+        <td>
+            Number of matches
+        </td>
+    </tr>
+<tr *ngFor="let player of players$ | async">
+    <td><b>{{player.imeIgraca}}</b></td>
+    <td>{{player.brojDresa}}</td>
+    <td>{{player.ukupnaBrojPoena}}</td>
+    <td>{{player.brojUtakmica}}</td>
+
+   
+</tr>
+</table>
+
+</div><br><br>
+</body>
+</html>

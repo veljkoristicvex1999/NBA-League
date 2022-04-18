@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h3>Games in season 2021/2022</h3>
+        <div class="container">
+            <table class="center"  >
+                <tr>
+                <td>
+                    Host
+                </td>
+                <td>
+                    Guest
+                </td>
+                <td>
+                    Arena
+                </td>
+                <td>
+                    Result
+                </td>
+            </tr>
+        <tr *ngFor="let game of games$ | async">
+            <td>Home</td>
+            <td>Guest</td>
+            <td>{{game.mestoOdigravanja}}</td>
+            <td>{{game.brojPoenaTIma}}:{{game.brojPoenaTima1}}</td>
+            
+        </tr>
+        </table>
+        </div>
+    </body>
+</html>

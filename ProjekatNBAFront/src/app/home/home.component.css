@@ -1,0 +1,14 @@
+body {background-color: coral;}
+h1{
+    text-align: center;
+  }
+  .pic{
+      width: 100%;
+      height: 50%;
+  }
+  table, th, td {
+    border:1px solid black;
+  }
+  table {
+    width: 60%;
+  }

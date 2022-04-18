@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <table>
+        <tr *ngFor="let n of news$ | async">
+        <td>  <img class="picture"  src="{{n.slikaVest}}" > </td>
+        <td>{{n.opis}}</td>
+        <td>{{n.idVesti}}</td>
+
+        </table>
+            <br>
+            <div class="center">
+                
+                <button class="btn btn-sm btn-outline-secondary" type="button" 
+                routerLink="/dodajVest" routerLinkActive="active" *ngIf="adminLog">Add news   </button>      
+                      <br><br>
+                      <button class="btn btn-sm btn-outline-secondary" type="button" 
+                      routerLink="/izbrisiVest" routerLinkActive="active" *ngIf="adminLog">Delete news</button>         </div>
+       
+    </body>
+</html>
